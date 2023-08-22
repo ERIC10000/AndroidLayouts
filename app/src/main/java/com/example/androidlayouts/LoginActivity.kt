@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 
 
 class LoginActivity : AppCompatActivity() {
@@ -21,6 +22,14 @@ class LoginActivity : AppCompatActivity() {
             // Intent -> message in android
             // Intent to move from LoginActivity(applicationContext) to MainActivity
             val intentMain = Intent(applicationContext, MainActivity::class.java)
+            startActivity(intentMain)
+        }
+
+        val tvLogin : TextView = findViewById(R.id.tvLogin)
+        tvLogin.setOnClickListener {
+            // Intent -> message in android
+            // Intent to move from LoginActivity(applicationContext) to MainActivity
+            val intentMain = Intent(applicationContext, RegisterActivity::class.java)
             startActivity(intentMain)
         }
 

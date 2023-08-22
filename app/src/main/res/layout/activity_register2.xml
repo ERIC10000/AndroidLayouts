@@ -80,8 +80,6 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
-
-
             <Button
                 android:id="@+id/buttonRegister1"
                 android:layout_width="match_parent"

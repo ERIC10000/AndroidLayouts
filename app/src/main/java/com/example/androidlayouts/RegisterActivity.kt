@@ -3,6 +3,7 @@ package com.example.androidlayouts
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 
 class RegisterActivity : AppCompatActivity() {
@@ -15,8 +16,15 @@ class RegisterActivity : AppCompatActivity() {
         tvRegister1.setOnClickListener {
             val intentLogin = Intent(applicationContext, LoginActivity::class.java)
             startActivity(intentLogin)
+        }
+
+        val buttonRegister1 : Button = findViewById(R.id.buttonRegister1)
+        buttonRegister1.setOnClickListener {
+            val intentLogin = Intent(applicationContext, RegisterActivity2::class.java)
+            startActivity(intentLogin)
 
         }
+
 
     }
 }
