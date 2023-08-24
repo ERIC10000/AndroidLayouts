@@ -1,5 +1,8 @@
 package com.example.androidlayouts
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,7 +10,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ItemAdapter(private val itemList: List<Item>) :
+
+class ItemAdapter(private val itemList: List<Item>, val context: Context) :
     RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -28,6 +32,28 @@ class ItemAdapter(private val itemList: List<Item>) :
         holder.imageView.setImageResource(currentItem.imageResId)
         holder.titleTextView.text = currentItem.title
         holder.descriptionTextView.text = currentItem.description
+
+        holder.itemView.setOnClickListener {
+
+            //create SharedPreference and Save the data of the View Holder
+            // On SingleActivity, we get data the saved data from SPreferences
+
+            val prefs: SharedPreferences = context.getSharedPreferences("storage", Context.MODE_PRIVATE)
+            val editor = prefs.edit()
+
+            editor.putInt("item_image", currentItem.imageResId)
+            editor.putString("room_name", currentItem.title)
+            editor.putString("item_desc", currentItem.description)
+            editor.apply()
+
+            // Intent to the SingleActivity
+            val intent = Intent(context, SingleActivity::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            context.startActivity(intent)
+
+
+        }
+
     }
 
     override fun getItemCount(): Int {

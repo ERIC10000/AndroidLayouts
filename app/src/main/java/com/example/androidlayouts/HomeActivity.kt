@@ -12,7 +12,7 @@ class HomeActivity : AppCompatActivity() {
 
         // binding data from the Model, through ViewModel to the View
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
-        val itemAdapter: ItemAdapter = ItemAdapter(generateData())
+        val itemAdapter: ItemAdapter = ItemAdapter(generateData(), applicationContext)
         recyclerView.adapter = itemAdapter
 
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
