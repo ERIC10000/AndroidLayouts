@@ -1,28 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="18dp"
     tools:context=".SingleActivity">
 
-    <TextView
-        android:id="@+id/roomName"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Room Name"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:layout_height="match_parent"
+        android:padding="18dp"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="12dp"
+            app:cardCornerRadius="15dp"
+            android:padding="16dp"
+            android:layout_margin="10dp">
 
-    <TextView
-        android:id="@+id/roomDesc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Room Description"
-        android:textSize="18sp"
-        android:textAlignment="center"/>
+            <ImageView
+                android:id="@+id/roomImage"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/conference1"
+                android:scaleType="centerCrop"/>
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/roomName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="320dp"
+                android:text="Room Name"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/roomDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Room Description"
+                android:layout_marginTop="380dp"
+                android:textSize="18sp"
+                android:textAlignment="center"/>
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter Phone"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:padding="8dp"
+            android:background="@drawable/custom_edit"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawablePadding="8dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter Amount"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:padding="8dp"
+            android:background="@drawable/custom_edit"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawablePadding="8dp"/>
+
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Book Now"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"
+            android:textAllCaps="true"
+            android:backgroundTint="@color/blue"
+            android:background="@drawable/custom_button"/>
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Check Other Conference Rooms"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:textColor="@color/purple_500"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+
+</ScrollView>

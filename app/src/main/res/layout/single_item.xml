@@ -18,29 +18,52 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="300dp"
             android:src="@drawable/conference1"
             android:scaleType="centerCrop"
             android:elevation="5dp"
             android:layout_marginBottom="8dp"/>
 
         <TextView
-            android:id="@+id/textViewTitle"
+            android:id="@+id/textViewRoomName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Conference Room Name"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:textAlignment="center"
             android:textColor="@color/black"/>
 
         <TextView
-            android:id="@+id/textViewDescription"
+            android:id="@+id/textViewRoomCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KSHS 20000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textViewRoomDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Conference Description"
             android:textSize="14sp"
             android:textStyle="normal"
+            android:textAlignment="center"
             android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textViewRoomAvailability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Available"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#4CAF50"
+            />
 
     </LinearLayout>
 

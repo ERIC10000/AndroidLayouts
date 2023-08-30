@@ -34,6 +34,7 @@
                 android:textColor="@color/purple_500"/>
 
             <EditText
+                android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Username"
@@ -46,6 +47,7 @@
                 android:drawablePadding="8dp"/>
 
             <EditText
+                android:id="@+id/phone"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Phone"
@@ -58,6 +60,7 @@
                 android:drawablePadding="8dp"/>
 
             <EditText
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Email"
@@ -72,6 +75,7 @@
 
 
             <EditText
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Password"
